@@ -35,7 +35,7 @@ public class EducacionController {
 
  
 
-    @PostMapping("agregar-educacion")
+    @PostMapping("nuevo/agregar-educacion")
     public ResponseEntity<Educacion> create(@RequestBody  Educacion educacion){
         educacionService.guardar(educacion);
         return new ResponseEntity(new Mensaje("educacion guardada"),HttpStatus.CREATED);
