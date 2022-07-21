@@ -15,9 +15,9 @@ public class Educacion {
 		@NotBlank
 		@Column(unique=true)
 		private String tituloEdu;
-		
+	        @NotNull	
 		private String fechaEdu;
-		
+		@NotNull
 		private String descEdu;
 
 		private String imagenEdu;
@@ -27,8 +27,7 @@ public class Educacion {
 		}
 	
 		/*constructor parametrizado*/
-		public Educacion (Long idEdu,String tituloEdu,String fechaEdu,String descEdu,String imagenEdu){
-		this.idEdu = idEdu;
+		public Educacion (String tituloEdu,String fechaEdu,String descEdu,String imagenEdu){
 		this.tituloEdu = tituloEdu;
 		this.fechaEdu = fechaEdu;
 		this.descEdu = descEdu;
