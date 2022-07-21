@@ -36,7 +36,7 @@ public class ProductoController {
     }
 
     @PostMapping("nuevo")
-    public ResponseEntity<?> create(@RequestBody Producto producto){
+  public ResponseEntity<?> create(@RequestBody Producto producto){
         if(StringUtils.isBlank(producto.getNombreProducto()))
             return new ResponseEntity(new Mensaje("el nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         if((Integer)producto.getPrecio() == null || producto.getPrecio()==0)
