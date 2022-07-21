@@ -15,9 +15,9 @@ public class Educacion {
 		@NotBlank
 		@Column(unique=true)
 		private String tituloEdu;
-	        @NotNull	
+	        	
 		private String fechaEdu;
-		@NotNull
+		
 		private String descEdu;
 
 		private String imagenEdu;
