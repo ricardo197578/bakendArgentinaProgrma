@@ -15,9 +15,9 @@ public class Educacion {
 		@NotBlank
 		@Column(unique=true)
 		private String tituloEdu;
-		@NotNull
-		private int fechaEdu;
-		@NotNull
+		
+		private String fechaEdu;
+		
 		private String descEdu;
 
 		private String imagenEdu;
@@ -27,7 +27,7 @@ public class Educacion {
 		}
 	
 		/*constructor parametrizado*/
-		public Educacion (Long idEdu,String tituloEdu,int fechaEdu,String descEdu,String imagenEdu){
+		public Educacion (Long idEdu,String tituloEdu,String fechaEdu,String descEdu,String imagenEdu){
 		this.idEdu = idEdu;
 		this.tituloEdu = tituloEdu;
 		this.fechaEdu = fechaEdu;
@@ -47,10 +47,10 @@ public class Educacion {
 		public void setTituloEdu(String tituloEdu){
 			this.tituloEdu = tituloEdu;
 		}
-		public int getFechaEdu(){
+		public String getFechaEdu(){
 			return fechaEdu;
 		}
-		public void setFechaEdu (int fechaEdu){
+		public void setFechaEdu (String fechaEdu){
 			this.fechaEdu = fechaEdu;
 		}
 		public String getDescEdu(){
