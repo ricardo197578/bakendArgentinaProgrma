@@ -27,6 +27,13 @@ public class EducacionService {
         return educacionRepository.findById(id);
     }
 
+public Optional<Educacion> obtenerTituloEdu(String np){
+        return educacionRepository.findByTituloEdu(np);
+    }
+
+
+
+
 
     public void guardar(Educacion educacion){
         educacionRepository.save(educacion);
@@ -34,6 +41,12 @@ public class EducacionService {
 	public void borrar(Long id){
         educacionRepository.deleteById(id);
     }
+
+
+
+
+
+
 
     public boolean existePorId(Long id){
         return educacionRepository.existsById(id);
