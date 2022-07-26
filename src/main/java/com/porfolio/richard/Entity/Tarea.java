@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.porfolio.richard.CrudCode.Model;
+package com.porfolio.richard.Entity;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,10 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- *
- * @author yonder
- */
+
 @Entity
 @Table(name="Tb_Tarea")
 public class Tarea {
@@ -22,14 +16,13 @@ public class Tarea {
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="Id")
     private Integer Id;
-    
+
     @Column(name="Tarea")
     private String Tarea;
-    
+
     @Column(name="Finalizado")
     private Boolean Finalizado;
-
-    public Integer getId() {
+public Integer getId() {
         return Id;
     }
 
@@ -48,9 +41,9 @@ public class Tarea {
     public Boolean getFinalizado() {
         return Finalizado;
     }
-
-    public void setFinalizado(Boolean Finalizado) {
+  public void setFinalizado(Boolean Finalizado) {
         this.Finalizado = Finalizado;
     }
-    
+
 }
+
