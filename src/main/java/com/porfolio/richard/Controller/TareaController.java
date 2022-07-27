@@ -54,7 +54,8 @@ public class TareaController {
         return tareaService.save(tareaActual);
     }
     
-    @DeleteMapping("/tareas/{id}")
+    @DeleteMapping("/tareas/eliminar/{id}")
+    
     public void eliminar(@PathVariable Integer id)
     {
         tareaService.delete(id);
