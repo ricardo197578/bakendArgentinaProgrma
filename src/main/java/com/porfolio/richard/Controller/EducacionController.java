@@ -42,6 +42,9 @@ public class EducacionController {
         
     }
 
+
+
+
     @PutMapping("/actualizar/{id}")
     public ResponseEntity<Educacion> update(@RequestBody Educacion educacion, @PathVariable("id") Long id){
 	Educacion educacionUpdate = educacionService.obtenerPorId(id).get();
@@ -57,12 +60,13 @@ public class EducacionController {
 	return new ResponseEntity(new Mensaje ("educacion actualizada"),HttpStatus.CREATED);
         
     }
-
-
-    @DeleteMapping("/borrar/{id}")
-    public ResponseEntity<Educacion> delete(@PathVariable Long id){
-             educacionService.borrar(id);
-       return new ResponseEntity(new Mensaje ("educacion eliminada"),HttpStatus.OK);
+@DeleteMapping("/borrar/{id}")
+    public ResponseEntity<?> delete(@PathVariable Long id){
+        if(!educacionService.existePorId(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        educacionService.borrar(id);
+        return new ResponseEntity(new Mensaje(" eliminado"), HttpStatus.OK);
     }
-}
 
+
+}
