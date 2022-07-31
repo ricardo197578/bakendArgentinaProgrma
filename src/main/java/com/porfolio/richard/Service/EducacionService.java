@@ -44,10 +44,8 @@ public Optional<Educacion> obtenerTituloEdu(String np){
 
 
 
-	public boolean existePorNombre(String np){
-        return educacionRepository.existsByTituloEdu(np);
-    }
 
+       
 
 
     public boolean existePorId(Long id){

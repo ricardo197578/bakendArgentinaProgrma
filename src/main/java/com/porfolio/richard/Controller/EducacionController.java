@@ -60,22 +60,22 @@ public class EducacionController {
 	return new ResponseEntity(new Mensaje ("educacion actualizada"),HttpStatus.CREATED);*/
 
 
-	@PutMapping("/actualizar/{id}")
+@PutMapping("/actualizar/{id}")
     public ResponseEntity<?> update(@RequestBody Educacion educacion, @PathVariable("id") Long id){
         if(!educacionService.existePorId(id))
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        if(StringUtils.isBlank(educacion.getTituloEdu()))
-            return new ResponseEntity(new Mensaje("el titulo es obligatorio"), HttpStatus.BAD_REQUEST);
-       if(educacionService.existePorNombre(educacion.getTituloEdu()) 
-       	&& educacionService.obtenerPorNombre(educacion.getTituloEdu()).get().getId() != id)
-            return new ResponseEntity(new Mensaje("ese nombre ya existe"), HttpStatus.BAD_REQUEST);
-        Educacion educacionUpdate = educacionService.obtenerPorId(id).get();
+            return new ResponseEntity(new Mensaje("no existe ese producto"), HttpStatus.NOT_FOUND);
+        
+       ducacion educacionUpdate = educacionService.obtenerPorId(id).get();
+
         educacionUpdate.setTituloEdu(educacion.getTituloEdu());
         educacionUpdate.setFechaEdu(educacion.getFechaEdu());
-	educacionUpdate.setDescEdu(educacion.getDescEdu());
-	educacionUpdate.setImagenEdu(educacion.getImagenEdu());
+          educacionUpdate.setDescEdu(educacion.getDescEdu());
+         educacionUpdate.setImagenEdu(educacion.getImagenEdu());
+
+
+
         educacionService.guardar(educacionUpdate);
-        return new ResponseEntity(new Mensaje(" actualizado"), HttpStatus.CREATED);
+        return new ResponseEntity(new Mensaje ("educacion actualizada"),HttpStatus.CREATED);
     }
 
 
