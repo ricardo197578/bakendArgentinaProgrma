@@ -13,7 +13,6 @@ public class Experiencia {
 		@GeneratedValue (strategy = GenerationType.AUTO)
 		private Long idExp;
 		private String tituloExp;
-		private String nombreExp;
 		private String fechaExp;
 		private String descExp;
 		private String imagenExp;
