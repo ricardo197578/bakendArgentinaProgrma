@@ -51,7 +51,7 @@ public class ExperienciaController {
 
         experienciaUpdate.setDescExp(experiencia.getDescExp());
         experienciaUpdate.setImagenExp(experiencia.getImagenExp());
-	experienciaUpdate.setNombreExp(experiencia.getNombreExp());
+	
 
         experienciaService.guardar(experienciaUpdate);
 		return new ResponseEntity(new Mensaje ("experiencia actualizada"),HttpStatus.CREATED);
