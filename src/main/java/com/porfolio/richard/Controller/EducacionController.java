@@ -65,7 +65,7 @@ public class EducacionController {
         if(!educacionService.existePorId(id))
             return new ResponseEntity(new Mensaje("no existe ese producto"), HttpStatus.NOT_FOUND);
         
-       ducacion educacionUpdate = educacionService.obtenerPorId(id).get();
+      Educacion educacionUpdate = educacionService.obtenerPorId(id).get();
 
         educacionUpdate.setTituloEdu(educacion.getTituloEdu());
         educacionUpdate.setFechaEdu(educacion.getFechaEdu());
