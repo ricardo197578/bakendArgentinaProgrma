@@ -27,13 +27,13 @@ public class Experiencia {
 		}
 	
 		/*constructor parametrizado*/
-		public Experiencia (String tituloExp,String fechaExp,String descExp,String imagenExp,String nombreExp){
+		public Experiencia (String tituloExp,String fechaExp,String descExp,String imagenExp){
 		
 		this.tituloExp = tituloExp;
 		this.fechaExp = fechaExp;
 		this.descExp = descExp;
 		this.imagenExp = imagenExp;
-		this.nombreExp = nombreExp;
+		
 		
 		}
 
@@ -69,12 +69,6 @@ public class Experiencia {
 			this.imagenExp = imagenExp;
 		}
 
-		 public String getNombreExp(){
-                        return nombreExp;
-                }
-                public void setNombreExp(String nombreExp){
-                        this.nombreExp = nombreExp;
-                }
 
 
 	}
