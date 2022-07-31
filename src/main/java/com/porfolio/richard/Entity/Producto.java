@@ -17,14 +17,14 @@ public class Producto {
     private String nombreProducto;
 
     @NotNull
-    private int precio;
+    private String descripcion;
 
     public Producto() {
     }
 
-    public Producto(String nombreProducto, int precio) {
+    public Producto (String nombreProducto, String descripcion) {
         this.nombreProducto = nombreProducto;
-        this.precio = precio;
+        this.descripcion = descripcion;
     }
 
     public Long getId() {
@@ -43,11 +43,11 @@ public class Producto {
         this.nombreProducto = nombreProducto;
     }
 
-    public int getPrecio() {
-        return precio;
+    public Strim getDescripcion() {
+        return descripcion;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }
