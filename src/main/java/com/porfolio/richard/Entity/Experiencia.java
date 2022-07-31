@@ -1,17 +1,20 @@
 package com.porfolio.richard.Entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 
 @Entity
+@Table(name="experiencia")
 public class Experiencia {
 	/*defino los atributos de la entidades*/
 
 		@Id
 		@GeneratedValue (strategy = GenerationType.AUTO)
 		private Long idExp;
+		@NotBlank
+                @Column(unique=true)
 		private String tituloExp;
 		private String fechaExp;
 		private String descExp;
