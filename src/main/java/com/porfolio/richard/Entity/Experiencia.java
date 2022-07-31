@@ -13,6 +13,7 @@ public class Experiencia {
 		@GeneratedValue (strategy = GenerationType.AUTO)
 		private Long idExp;
 		private String tituloExp;
+		private String nombreExp;
 		private String fechaExp;
 		private String descExp;
 		private String imagenExp;
@@ -28,6 +29,7 @@ public class Experiencia {
 		this.fechaExp = fechaExp;
 		this.descExp = descExp;
 		this.imagenExp = imagenExp;
+		
 		}
 
 		public Long getIdExp(){
@@ -42,6 +44,7 @@ public class Experiencia {
 		public void setTituloExp(String tituloExp){
 			this.tituloExp = tituloExp;
 		}
+
 		public String getFechaExp(){
 			return fechaExp;
 		}

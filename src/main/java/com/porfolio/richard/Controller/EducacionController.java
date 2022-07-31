@@ -48,8 +48,7 @@ public class EducacionController {
 
         educacionUpdate.setTituloEdu(educacion.getTituloEdu());
         educacionUpdate.setFechaEdu(educacion.getFechaEdu());
-	 educacionUpdate.setFechaEdu(educacion.getFechaEdu());
-	 educacionUpdate.setDescEdu(educacion.getDescEdu());
+	  educacionUpdate.setDescEdu(educacion.getDescEdu());
 	 educacionUpdate.setImagenEdu(educacion.getImagenEdu());
 
 

@@ -47,6 +47,8 @@ public class ExperienciaController {
 	Experiencia experienciaUpdate = experienciaService.obtenerPorId(id).get();
 
         experienciaUpdate.setTituloExp(experiencia.getTituloExp());
+	experienciaUpdate.setFechaExp(experiencia.getFechaExp());
+
         experienciaUpdate.setDescExp(experiencia.getDescExp());
         experienciaUpdate.setImagenExp(experiencia.getImagenExp());
 
