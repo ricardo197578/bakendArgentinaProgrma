@@ -5,7 +5,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name = "producto")
+@Table(name = "experiencia")
 
 public class Experiencia {
 	/*defino los atributos de la entidades*/
