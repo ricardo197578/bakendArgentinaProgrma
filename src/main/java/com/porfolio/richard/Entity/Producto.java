@@ -43,7 +43,7 @@ public class Producto {
         this.nombreProducto = nombreProducto;
     }
 
-    public Strim getDescripcion() {
+    public String getDescripcion() {
         return descripcion;
     }
 
