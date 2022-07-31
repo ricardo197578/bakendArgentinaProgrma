@@ -34,8 +34,8 @@ public Optional<Experiencia> obtenerPorId(Long id){
         experienciaRepository.save(experiencia);
     }
 
-    public void borrar(Long id){
-        experienciaRepository.deleteById(id);
+    public void borrar(Long idEdu){
+        experienciaRepository.deleteById(idEdu);
     }
 
     public boolean existePorId(Long id){
