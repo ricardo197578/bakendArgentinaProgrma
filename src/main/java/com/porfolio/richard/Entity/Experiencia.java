@@ -1,26 +1,21 @@
 package com.porfolio.richard.Entity;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-@Table(name="experiencia")
 public class Experiencia {
 	/*defino los atributos de la entidades*/
 
 		@Id
 		@GeneratedValue (strategy = GenerationType.AUTO)
 		private Long idExp;
-		@NotBlank
-                @Column(unique=true)
 		private String tituloExp;
 		private String fechaExp;
 		private String descExp;
 		private String imagenExp;
-		private String nombreExp;
-
 	
 		/*constructor vacio*/
 		public Experiencia(){
@@ -33,8 +28,6 @@ public class Experiencia {
 		this.fechaExp = fechaExp;
 		this.descExp = descExp;
 		this.imagenExp = imagenExp;
-		
-		
 		}
 
 		public Long getIdExp(){
@@ -49,7 +42,6 @@ public class Experiencia {
 		public void setTituloExp(String tituloExp){
 			this.tituloExp = tituloExp;
 		}
-
 		public String getFechaExp(){
 			return fechaExp;
 		}
@@ -68,7 +60,6 @@ public class Experiencia {
 		public void setImagenExp(String imagenExp){
 			this.imagenExp = imagenExp;
 		}
-
 
 
 	}

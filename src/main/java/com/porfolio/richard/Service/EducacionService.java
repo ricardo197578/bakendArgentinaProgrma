@@ -45,7 +45,7 @@ public Optional<Educacion> obtenerTituloEdu(String np){
 
 
 
-       
+
 
 
     public boolean existePorId(Long id){

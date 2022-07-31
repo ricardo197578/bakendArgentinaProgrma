@@ -42,51 +42,28 @@ public class EducacionController {
         
     }
 
-
-
-
-   /* @PutMapping("/actualizar/{id}")
+    @PutMapping("/actualizar/{id}")
     public ResponseEntity<Educacion> update(@RequestBody Educacion educacion, @PathVariable("id") Long id){
 	Educacion educacionUpdate = educacionService.obtenerPorId(id).get();
 
         educacionUpdate.setTituloEdu(educacion.getTituloEdu());
         educacionUpdate.setFechaEdu(educacion.getFechaEdu());
-	  educacionUpdate.setDescEdu(educacion.getDescEdu());
+	 educacionUpdate.setFechaEdu(educacion.getFechaEdu());
+	 educacionUpdate.setDescEdu(educacion.getDescEdu());
 	 educacionUpdate.setImagenEdu(educacion.getImagenEdu());
 
 
 
         educacionService.guardar(educacionUpdate);
-	return new ResponseEntity(new Mensaje ("educacion actualizada"),HttpStatus.CREATED);*/
-
-
-@PutMapping("/actualizar/{id}")
-    public ResponseEntity<?> update(@RequestBody Educacion educacion, @PathVariable("id") Long id){
-        if(!educacionService.existePorId(id))
-            return new ResponseEntity(new Mensaje("no existe ese producto"), HttpStatus.NOT_FOUND);
+	return new ResponseEntity(new Mensaje ("educacion actualizada"),HttpStatus.CREATED);
         
-      Educacion educacionUpdate = educacionService.obtenerPorId(id).get();
-
-        educacionUpdate.setTituloEdu(educacion.getTituloEdu());
-        educacionUpdate.setFechaEdu(educacion.getFechaEdu());
-          educacionUpdate.setDescEdu(educacion.getDescEdu());
-         educacionUpdate.setImagenEdu(educacion.getImagenEdu());
-
-
-
-        educacionService.guardar(educacionUpdate);
-        return new ResponseEntity(new Mensaje ("educacion actualizada"),HttpStatus.CREATED);
     }
 
 
-    
-@DeleteMapping("/borrar/{id}")
-    public ResponseEntity<?> delete(@PathVariable Long id){
-        if(!educacionService.existePorId(id))
-            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
-        educacionService.borrar(id);
-        return new ResponseEntity(new Mensaje(" eliminado"), HttpStatus.OK);
+    @DeleteMapping("/borrar/{id}")
+    public ResponseEntity<Educacion> delete(@PathVariable Long id){
+             educacionService.borrar(id);
+       return new ResponseEntity(new Mensaje ("educacion eliminada"),HttpStatus.OK);
     }
-
-
 }
+

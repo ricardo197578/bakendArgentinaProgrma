@@ -24,11 +24,6 @@ public Optional<Experiencia> obtenerPorId(Long id){
         return experienciaRepository.findById(id);
     }
 
-	public Optional<Experiencia> obtenerTituloExp(String np){
-        return experienciaRepository.findByTituloExp(np);
-    }
-
-
     public void guardar(Experiencia experiencia){
         experienciaRepository.save(experiencia);
     }
