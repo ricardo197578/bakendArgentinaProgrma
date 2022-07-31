@@ -12,7 +12,7 @@ public class Experiencia {
 
 		@Id
 		@GeneratedValue (strategy = GenerationType.AUTO)
-		private Long idExp;
+		private Long id;
 		@NotBlank
                 @Column(unique=true)
 		private String tituloExp;
@@ -37,11 +37,11 @@ public class Experiencia {
 		
 		}
 
-		public Long getIdExp(){
-			return idExp;
+		public Long getId(){
+			return id;
 		}
-		public void setIdExp(Long idExp){
-			this.idExp = idExp;
+		public void setId(Long id){
+			this.id = id;
 		}
 		public String getTituloExp(){
 			return tituloExp;
