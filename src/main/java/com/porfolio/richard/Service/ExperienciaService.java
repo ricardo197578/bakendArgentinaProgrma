@@ -20,8 +20,8 @@ public class ExperienciaService {
         List<Experiencia> lista = experienciaRepository.findAll();
         return lista;
     }
-public Optional<Experiencia> obtenerPorId(Long id){
-        return experienciaRepository.findById(id);
+public Optional<Experiencia> obtenerPorId(Long idExp){
+        return experienciaRepository.findById(idExp);
     }
     
 	public Optional<Experiencia> obtenerPorNombre(String np){

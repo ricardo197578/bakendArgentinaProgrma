@@ -45,9 +45,9 @@ public class ExperienciaController {
 
     }
 
-    @PutMapping("/actualizar/{id}")
-    public ResponseEntity<?> update(@RequestBody Experiencia experiencia, @PathVariable("id") Long id){
-	Experiencia experienciaUpdate = experienciaService.obtenerPorId(id).get();
+    @PutMapping("/actualizar/{idExp}")
+    public ResponseEntity<?> update(@RequestBody Experiencia experiencia, @PathVariable("idExp") Long idExp){
+	Experiencia experienciaUpdate = experienciaService.obtenerPorId(idExp).get();
 
         experienciaUpdate.setTituloExp(experiencia.getTituloExp());
         experienciaUpdate.setFechaExp(experiencia.getFechaExp());
