@@ -39,7 +39,7 @@ public Optional<Experiencia> obtenerPorId(Long id){
     }
 
 	public boolean existePorNombre(String np){
-        return educacionRepository.existsByNombreEducacion(np);
+        return experienciaRepository.existsByNombreExperiencia(np);
     }
 
 
