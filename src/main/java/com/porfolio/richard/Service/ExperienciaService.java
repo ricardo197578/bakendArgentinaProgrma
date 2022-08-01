@@ -32,10 +32,13 @@ public Optional<Experiencia> obtenerPorId(Long id){
         experienciaRepository.deleteById(id);
     }
 
+    public boolean existePorNombre(String np){
+        return experienciaRepository.existsByTituloExp(np);
+    }
     public boolean existePorId(Long id){
         return experienciaRepository.existsById(id);
+    }
 
-}
 
 }
 
