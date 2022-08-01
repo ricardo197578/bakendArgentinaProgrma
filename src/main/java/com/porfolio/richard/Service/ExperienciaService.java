@@ -24,7 +24,7 @@ public Optional<Experiencia> obtenerPorId(Long id){
         return experienciaRepository.findById(id);
     }
 
-	public Optional<Educacion> obtenerPorNombre(String np){
+	public Optional<Experiencia> obtenerPorNombre(String np){
         return educacionRepository.findByNombreEducacion(np);
     }
 
