@@ -23,7 +23,10 @@ public class ExperienciaService {
 public Optional<Experiencia> obtenerPorId(Long id){
         return experienciaRepository.findById(id);
     }
-
+    
+	public Optional<Experiencia> obtenerPorNombre(String np){
+        return experienciaRepository.findByTituloExp(np);
+    }
     public void guardar(Experiencia experiencia){
         experienciaRepository.save(experiencia);
     }
