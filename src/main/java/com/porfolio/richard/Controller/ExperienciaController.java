@@ -61,7 +61,7 @@ public class ExperienciaController {
 
     @DeleteMapping("/borrar/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id){
-   	f(!experienciaService.existePorId(id))
+   	f(!experienciaService.existePorId(id));
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND); 
    	    experienciaService.borrar(id);
 	     return new ResponseEntity(new Mensaje ("experiencia eliminada"),HttpStatus.OK);
