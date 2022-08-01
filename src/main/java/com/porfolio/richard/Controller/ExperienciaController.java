@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 
 import java.util.List;
 
@@ -21,21 +21,23 @@ public class ExperienciaController {
 
     @Autowired
     ExperienciaService experienciaService;
-@GetMapping("/lista")
+
+    @GetMapping("/lista")
     public ResponseEntity<List<Experiencia>> getLista(){
         List<Experiencia> lista = experienciaService.obtenerTodos();
         return new ResponseEntity<List<Experiencia>>(lista, HttpStatus.OK);
     }
     @GetMapping("/detalle/{id}")
     public ResponseEntity<Experiencia> getOne(@PathVariable Long id){
+        if(!experienciaService.existePorId(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         Experiencia experiencia = experienciaService.obtenerPorId(id).get();
-        return new ResponseEntity<Experiencia>(experiencia,HttpStatus.OK);
+        return new ResponseEntity<Experiencia>(producto, HttpStatus.OK);    
+   
     }
 
-
-
     @PostMapping("nuevo")
-    public ResponseEntity<Experiencia> create(@RequestBody  Experiencia experiencia){
+    public ResponseEntity<?> create(@RequestBody  Experiencia experiencia){
 
         experienciaService.guardar(experiencia);
 	return new ResponseEntity(new Mensaje ("experiencia guardada"),HttpStatus.CREATED);
@@ -43,10 +45,12 @@ public class ExperienciaController {
     }
 
     @PutMapping("/actualizar/{id}")
-    public ResponseEntity<Experiencia> update(@RequestBody Experiencia experiencia, @PathVariable("id") Long id){
+    public ResponseEntity<?> update(@RequestBody Experiencia experiencia, @PathVariable("id") Long id){
 	Experiencia experienciaUpdate = experienciaService.obtenerPorId(id).get();
 
         experienciaUpdate.setTituloExp(experiencia.getTituloExp());
+	experienciaUpdate.setFechaExp(experiencia.getFechaExp());
+
         experienciaUpdate.setDescExp(experiencia.getDescExp());
         experienciaUpdate.setImagenExp(experiencia.getImagenExp());
 
@@ -56,10 +60,11 @@ public class ExperienciaController {
 
 
     @DeleteMapping("/borrar/{id}")
-    public ResponseEntity<?> delete(@PathVariable Long id){
-             experienciaService.borrar(id);
-	     return new ResponseEntity(new Mensaje ("experiencia eliminada"),HttpStatus.OK);
-
+  	     public ResponseEntity<?> delete(@PathVariable Long id){
+        if(!experienciaService.existePorId(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        experienciaService.borrar(id);
+        return new ResponseEntity(new Mensaje("producto eliminado"), HttpStatus.OK);
     }
 }
 
