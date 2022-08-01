@@ -38,7 +38,7 @@ public class ExperienciaController {
 
 
     @PostMapping("nuevo")
-    public ResponseEntity<Experiencia> create(@RequestBody  Experiencia experiencia){
+    public ResponseEntity<?> create(@RequestBody  Experiencia experiencia){
 
         experienciaService.guardar(experiencia);
 	return new ResponseEntity(new Mensaje ("experiencia guardada"),HttpStatus.CREATED);
