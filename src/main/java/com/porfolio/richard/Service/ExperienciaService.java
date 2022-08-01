@@ -24,6 +24,12 @@ public Optional<Experiencia> obtenerPorId(Long id){
         return experienciaRepository.findById(id);
     }
 
+	public Optional<Educacion> obtenerPorNombre(String np){
+        return educacionRepository.findByNombreEducacion(np);
+    }
+
+
+
     public void guardar(Experiencia experiencia){
         experienciaRepository.save(experiencia);
     }
@@ -31,6 +37,11 @@ public Optional<Experiencia> obtenerPorId(Long id){
     public void borrar(Long id){
         experienciaRepository.deleteById(id);
     }
+
+	public boolean existePorNombre(String np){
+        return educacionRepository.existsByNombreEducacion(np);
+    }
+
 
     public boolean existePorId(Long id){
         return experienciaRepository.existsById(id);
