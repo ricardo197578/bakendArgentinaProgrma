@@ -32,7 +32,7 @@ public class ExperienciaController {
         if(!experienciaService.existePorId(id))
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         Experiencia experiencia = experienciaService.obtenerPorId(id).get();
-        return new ResponseEntity<Experiencia>(producto, HttpStatus.OK);    
+        return new ResponseEntity<Experiencia>(experiencia, HttpStatus.OK);    
    
     }
 
