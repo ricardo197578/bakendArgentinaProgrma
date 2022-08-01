@@ -30,9 +30,9 @@ public Optional<Experiencia> obtenerPorId(Long id){
     public void guardar(Experiencia experiencia){
         experienciaRepository.save(experiencia);
     }
-
-    public void borrar(Long id){
-        experienciaRepository.deleteById(id);
+//cabio en id por idExp
+    public void borrar(Long idExp){
+        experienciaRepository.deleteById(idExp);
     }
 
     public boolean existePorNombre(String np){
