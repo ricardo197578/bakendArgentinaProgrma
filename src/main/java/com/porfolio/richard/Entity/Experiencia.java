@@ -23,8 +23,9 @@ public class Experiencia {
 		}
 	
 		/*constructor parametrizado*/
-		public Experiencia (String tituloExp,String fechaExp,String descExp,String imagenExp){
-		
+		public Experiencia ( Long idExp,String tituloExp,String fechaExp,String descExp,String imagenExp){
+	
+		this.idExp= idExp;	
 		this.tituloExp = tituloExp;
 		this.fechaExp = fechaExp;
 		this.descExp = descExp;
