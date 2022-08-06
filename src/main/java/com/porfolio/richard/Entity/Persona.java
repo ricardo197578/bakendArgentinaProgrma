@@ -31,12 +31,17 @@ public class Persona implements Serializable {
 	@Size(min =1,max = 50 ,message= "LONGITUD INCORRECTA")
 	private String img;
 	
-	@OneToMany(fetch = FetchType.LAZY,mappedBy ="idEdu")
-	private List<Educacion> educacionList;
-	@OneToMany(fetch = FetchType.LAZY,mappedBy ="idSkill")
-	private List<Skills>skillList;
-	@OneToMany(fetch = FetchType.LAZY,mappedBy ="idExp")
-	private List<Experiencia> experienciaList;
+	
+	//@OneToMany(fetch = FetchType.LAZY,mappedBy ="id")
+        //private List<ExperinciaRichard> expereinciaRichardList;
+
+	
+	//@OneToMany(fetch = FetchType.LAZY,mappedBy ="idEdu")
+	//private List<Educacion> educacionList;
+	//@OneToMany(fetch = FetchType.LAZY,mappedBy ="idSkill")
+	//private List<Skills>skillList;
+	//@OneToMany(fetch = FetchType.LAZY,mappedBy ="idExp")
+	//private List<Experiencia> experienciaList;
 
 	
 	public Persona(){
