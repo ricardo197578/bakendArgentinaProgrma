@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @CrossOrigin(origins={"*"})
@@ -30,6 +31,7 @@ public class ExperienciaRichardController {
 
     //guardar
     @PostMapping("/experiencia")
+     @PreAuthorize("hasRole('ADMIN')")
     public  ExperienciaRichard guardar(@RequestBody ExperienciaRichard experienciaRichard)
     {
         return experienciaRichardService.save(experienciaRichard);
@@ -37,6 +39,8 @@ public class ExperienciaRichardController {
 
     //get una tarea
     @GetMapping("/experiencia{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+
     public ExperienciaRichard getUnaExperienciaRichard(@PathVariable Integer id)
     {
         return experienciaRichardService.findById(id);
@@ -44,6 +48,8 @@ public class ExperienciaRichardController {
 
     //Modeficar
     @PutMapping("/experiencia/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
+
     public ExperienciaRichard modifecar(@RequestBody ExperienciaRichard experienciaRichard,@PathVariable Integer id)
     {
         ExperienciaRichard experienciaRichardActual= experienciaRichardService.findById(id);
@@ -57,7 +63,9 @@ public class ExperienciaRichardController {
     }
 
     @DeleteMapping("/experiencia/{id}")
-    public void eliminar(@PathVariable Integer id)
+    @PreAuthorize("hasRole('ADMIN')")
+
+        public void eliminar(@PathVariable Integer id)
     {
         experienciaRichardService.delete(id);
     }
