@@ -1,10 +1,10 @@
-package com.codeteam.CrudCode;
+package com.porfolio.richard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CrudCodeApplicationTests {
+class RichardApplicationTests {
 
 	@Test
 	void contextLoads() {

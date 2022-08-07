@@ -1,6 +1,6 @@
 package com.porfolio.richard.Service;
 
-import com.porfolio.richard.Model.ExperienciaRichard;
+import com.porfolio.richard.Entity.ExperienciaRichard;
 import java.util.List;
 
 public interface ExperienciaRichardService {
@@ -10,4 +10,3 @@ public interface ExperienciaRichardService {
     public void delete(Integer id);
 
 }
-

@@ -1,4 +1,4 @@
-package com.porfolio.richard.Model;
+package com.porfolio.richard.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,13 +18,13 @@ public class ExperienciaRichard {
 
     @Column(name="Empresa")
     private String Empresa;
-	
+
     @Column(name="FechaInicioExp")
     private String FechaInicioExp;
 
     @Column(name="FechaFinExp")
     private String FechaFinExp;
-
+    
     @Column(name="DescripcionExp")
     private String DescripcionExp;
 
@@ -41,7 +41,7 @@ public class ExperienciaRichard {
         this.Id = Id;
     }
 
-    //Empresa	    
+    //Empresa       
     public String getEmpresa() {
         return Empresa;
     }
@@ -49,14 +49,13 @@ public class ExperienciaRichard {
     public void setEmpresa(String Empresa) {
         this.Empresa = Empresa;
     }
-
-    //inicio
+	 //inicio
     public String getFechaInicioExp() {
-   	return FechaInicioExp;
+        return FechaInicioExp;
     }
 
     public void setFechaInicioExp(String FechaInicioExp){
-	    this.FechaInicioExp = FechaInicioExp;
+            this.FechaInicioExp = FechaInicioExp;
     }
 
     //fin
@@ -72,16 +71,15 @@ public class ExperienciaRichard {
     public String getDescripcionExp() {
         return DescripcionExp;
     }
-    
-    public void setDescripcionExp(String DescripcionExp){
+	public void setDescripcionExp(String DescripcionExp){
             this.DescripcionExp = DescripcionExp;
     }
-	
+
     //Imagen
     public String getImagenExp() {
         return ImagenExp;
     }
-    
+
     public void setImagenExp(String ImagenExp){
             this.ImagenExp = ImagenExp;
     }
