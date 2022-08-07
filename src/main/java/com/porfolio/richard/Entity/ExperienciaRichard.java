@@ -1,4 +1,4 @@
-package com.porfolio.richard.Entity
+package com.porfolio.richard.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
