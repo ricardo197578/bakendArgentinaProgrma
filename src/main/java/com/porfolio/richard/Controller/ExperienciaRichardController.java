@@ -34,7 +34,7 @@ public class ExperienciaRichardController {
 
     //guardar
     @PostMapping("/experiencia")
-     @PreAuthorize("hasRole('ADMIN')")
+    // @PreAuthorize("hasRole('ADMIN')")
     public  ExperienciaRichard guardar(@RequestBody ExperienciaRichard experienciaRichard)
     {
         return experienciaRichardService.save(experienciaRichard);
@@ -42,7 +42,7 @@ public class ExperienciaRichardController {
 
     //get una tarea
     @GetMapping("/experiencia{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+   // @PreAuthorize("hasRole('ADMIN')")
 
     public ExperienciaRichard getUnaExperienciaRichard(@PathVariable Integer id)
     {
@@ -51,7 +51,7 @@ public class ExperienciaRichardController {
 
     //Modeficar
     @PutMapping("/experiencia/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    //@PreAuthorize("hasRole('ADMIN')")
 
     public ExperienciaRichard modifecar(@RequestBody ExperienciaRichard experienciaRichard,@PathVariable Integer id)
     {
@@ -66,7 +66,7 @@ public class ExperienciaRichardController {
     }
 
     @DeleteMapping("/experiencia/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+   // @PreAuthorize("hasRole('ADMIN')")
 
         public void eliminar(@PathVariable Integer id)
     {
