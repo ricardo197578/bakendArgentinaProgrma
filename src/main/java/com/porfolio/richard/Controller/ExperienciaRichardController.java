@@ -29,7 +29,7 @@ public class ExperienciaRichardController {
     @GetMapping("/experiencia")
     public List<ExperienciaRichard> listar()
     {
-        return experienciaRichardService.findAll(HttpStatus.OK);
+        return experienciaRichardService.findAll();
     }
 
     //guardar
