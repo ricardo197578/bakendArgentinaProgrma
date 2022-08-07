@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.security.access.prepost.PreAuthorize;
 
+import org.springframework.http.HttpStatus;
+
+
 @RestController
 @CrossOrigin(origins={"*"})
 @RequestMapping("/api")
@@ -26,7 +29,7 @@ public class ExperienciaRichardController {
     @GetMapping("/experiencia")
     public List<ExperienciaRichard> listar()
     {
-        return experienciaRichardService.findAll();
+        return experienciaRichardService.findAll(HttpStatus.OK);
     }
 
     //guardar
