@@ -1,7 +1,6 @@
 package com.porfolio.richard.Service;
 import com.porfolio.richard.Entity.Persona;
 
-import com.porfolio.richard.Entity.Educacion;
 import com.porfolio.richard.Repository.PersonaRepository;
 
 
