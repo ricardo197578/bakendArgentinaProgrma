@@ -1,4 +1,4 @@
-package com.porfolio.richard.Security.enums;
+package com.porfolio.richard.enums;
 
 
 public enum RolNombre {

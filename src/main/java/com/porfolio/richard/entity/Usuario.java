@@ -1,4 +1,4 @@
-package com.porfolio.richard.Security.Entity;
+package com.porfolio.richard.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
