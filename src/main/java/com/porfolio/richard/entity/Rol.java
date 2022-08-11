@@ -1,6 +1,6 @@
 package com.porfolio.richard.entity;
 
-import com.richard.porfolio.enums.RolNombre;
+import com.porfolio.richard.enums.RolNombre;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
