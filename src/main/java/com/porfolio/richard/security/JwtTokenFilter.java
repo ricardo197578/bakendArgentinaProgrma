@@ -1,6 +1,6 @@
 package com.porfolio.richard.security.JWT;
 
-import com.porfolio.richard.service.UserDetailsServiceImpl;
+import com.porfolio.richard.Service.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

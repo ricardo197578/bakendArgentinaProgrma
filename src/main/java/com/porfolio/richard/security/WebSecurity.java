@@ -2,7 +2,7 @@ package com.porfolio.richard.security;
 
 import com.porfolio.richard.security.JWT.JwtEntryPoint;
 import com.porfolio.richard.security.JWT.JwtTokenFilter;
-import com.porfolio.richard.service.UserDetailsServiceImpl;
+import com.porfolio.richard.Service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
