@@ -1,4 +1,4 @@
-package com.porfolio.richard.tDTO;
+package com.porfolio.richard.DTO;
 
 import org.springframework.security.core.GrantedAuthority;
 
