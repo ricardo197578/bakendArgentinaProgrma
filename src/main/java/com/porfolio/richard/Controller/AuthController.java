@@ -1,7 +1,7 @@
 package com.porfolio.richard.controller;
 
 import com.porfolio.richard.DTO.JwtDTO;
-import com.porfolio.richard.DTODTO.LoginUsuario;
+import com.porfolio.richard.DTO.LoginUsuario;
 import com.porfolio.richard.DTO.Mensaje;
 import com.porfolio.richard.DTO.NuevoUsuario;
 import com.porfolio.richard.entity.Rol;
