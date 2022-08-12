@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 @RestController
 @CrossOrigin(origins={"*"})
@@ -57,6 +58,7 @@ public class ExperienciaRichardController {
     }
 
     @DeleteMapping("/experiencia/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public void eliminar(@PathVariable Integer id)
     {
         experienciaRichardService.delete(id);
