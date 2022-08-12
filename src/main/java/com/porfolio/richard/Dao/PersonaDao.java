@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 
 
 
-public interface TareaDao extends CrudRepository<Persona, Integer>{
+public interface PersonaDao extends CrudRepository<Persona, Integer>{
 
 }
 
