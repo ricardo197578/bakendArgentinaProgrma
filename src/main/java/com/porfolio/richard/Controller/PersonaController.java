@@ -62,3 +62,4 @@ public class PersonaController {
     {
         personaService.delete(id);
     }
+}
