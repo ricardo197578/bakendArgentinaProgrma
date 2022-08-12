@@ -69,7 +69,7 @@ public class Persona {
     }
 
     //Dscripcion
-    public String getDescrpcion() {
+    public String getDescripcion() {
         return Descripcion;
     }
 
