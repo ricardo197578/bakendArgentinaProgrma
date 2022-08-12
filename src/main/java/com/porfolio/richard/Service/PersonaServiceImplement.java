@@ -31,7 +31,7 @@ public class PersonaServiceImplement  implements PersonaService{
      @Transactional(readOnly=true)
     public Persona findById(Integer id)
     {
-        return PersonaDao.findById(id).orElse(null);
+        return personaDao.findById(id).orElse(null);
     }
 
     @Override
