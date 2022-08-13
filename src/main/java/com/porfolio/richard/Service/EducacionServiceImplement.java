@@ -1,4 +1,4 @@
-ackage com.porfolio.richard.Service;
+package com.porfolio.richard.Service;
 
 import com.porfolio.richard.Dao.EducacionDao;
 import com.porfolio.richard.Model.Educacion;
