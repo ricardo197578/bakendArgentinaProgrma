@@ -20,7 +20,7 @@ public class Educacion {
     private String Titulo;
    
     @Column(name="Fecha")
-    private String Titulo;
+    private String Fecha;
 
    @Column(name="Descripcion")
    private String Descripcion;
