@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class EducacionController {
     @Autowired
-    private EducacionService EducacionService;
+    private EducacionService educacionService;
 
     //listar
     @GetMapping("/educacion")
