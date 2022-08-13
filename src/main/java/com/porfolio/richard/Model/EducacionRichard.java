@@ -60,7 +60,7 @@ public class Educacion {
 
     public void setDescripcion(String Descripcion) {
         this.Descripcion =Descripcion;
-    
+    } 
     //imagen
     public String getImagen() {
         return Imagen;
