@@ -58,7 +58,6 @@ public class ExperienciaRichardController {
     }
 
     @DeleteMapping("/experiencia/{id}")
-@PreAuthorize("hasRole('ADMIN')")
     public void eliminar(@PathVariable Integer id)
     {
         experienciaRichardService.delete(id);
