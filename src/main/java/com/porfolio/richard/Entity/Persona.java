@@ -6,12 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name="tb_personaNueva")
+
 public class Persona {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+
+
     private Long id;
     
     @NotNull
