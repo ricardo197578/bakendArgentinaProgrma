@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.persistence.Table;
+import javax.persistence.Column;
 
 
 @Entity
@@ -15,19 +16,26 @@ import javax.persistence.Table;
 public class Persona {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
+   @Column(name="Id")
 
 
     private Long id;
     
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
+	@Column(name="Nombre")
+
     private String nombre;
     
     @NotNull
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
+	@Column(name="Apellido")
+
     private String apellido;
     
     @Size(min = 1, max = 50, message = "no cumple con la longitud")
+	@Column(name="Imagen")
+
     private String img; // Es la imagen de portada. Este campo se dejara seteado desde Angular.
 
     public Long getId() {
