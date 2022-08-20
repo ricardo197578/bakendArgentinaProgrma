@@ -46,7 +46,7 @@ public class TareaController {
     }
     
     //Modeficar
-     @PreAuthorize("hasRole('ADMIN')")
+   
     @PutMapping("/tareas/{id}")
     public Tarea modifecar(@RequestBody Tarea tarea,@PathVariable Integer id)
     {
@@ -56,7 +56,7 @@ public class TareaController {
         
         return tareaService.save(tareaActual);
     }
-     @PreAuthorize("hasRole('ADMIN')")
+   
     @DeleteMapping("/tareas/{id}")
     public void eliminar(@PathVariable Integer id)
     {
