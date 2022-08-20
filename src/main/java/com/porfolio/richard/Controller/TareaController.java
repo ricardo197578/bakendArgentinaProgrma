@@ -31,7 +31,7 @@ public class TareaController {
     }
     
     //guardar
-     @PreAuthorize("hasRole('ADMIN')")
+     @PreAuthorize("hasRole('ADMIN','USER')")
     @PostMapping("/tareas")
     public  Tarea guardar(@RequestBody Tarea tarea)
     {
