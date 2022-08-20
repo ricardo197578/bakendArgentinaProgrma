@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import org.springframework.security.access.prepost.PreAuthorize;
+
 @RestController
 @CrossOrigin(origins={"*"})
 @RequestMapping("/api")
@@ -29,6 +31,7 @@ public class TareaController {
     }
     
     //guardar
+     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/tareas")
     public  Tarea guardar(@RequestBody Tarea tarea)
     {
@@ -43,6 +46,7 @@ public class TareaController {
     }
     
     //Modeficar
+     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/tareas/{id}")
     public Tarea modifecar(@RequestBody Tarea tarea,@PathVariable Integer id)
     {
@@ -52,7 +56,7 @@ public class TareaController {
         
         return tareaService.save(tareaActual);
     }
-    
+     @PreAuthorize("hasRole('ADMIN')")
     @DeleteMapping("/tareas/{id}")
     public void eliminar(@PathVariable Integer id)
     {
