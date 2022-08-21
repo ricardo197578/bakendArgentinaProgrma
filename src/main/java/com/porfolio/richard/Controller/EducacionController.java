@@ -32,7 +32,7 @@ public class EducacionController {
 
     //guardar
     @PostMapping("/educacion")
-     @PreAuthorize("hasRole('ADMIN')")
+    
     public  Educacion guardar(@RequestBody Educacion educacion)
     {
         return educacionService.save(educacion);
@@ -47,7 +47,6 @@ public class EducacionController {
 
     //Modeficar
     @PutMapping("/educacion/{id}")
-     @PreAuthorize("hasRole('ADMIN')")
     public Educacion modifecar(@RequestBody Educacion educacion,@PathVariable Integer id)
     {
         Educacion educacionActual= educacionService.findById(id);
@@ -60,7 +59,7 @@ public class EducacionController {
     }
    
     @DeleteMapping("/educacion/{id}")
-     @PreAuthorize("hasRole('ADMIN')")
+    
     public void eliminar(@PathVariable Integer id)
     {
         educacionService.delete(id);
