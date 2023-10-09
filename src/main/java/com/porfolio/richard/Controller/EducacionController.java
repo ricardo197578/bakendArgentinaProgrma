@@ -31,7 +31,7 @@ public class EducacionController {
 	}
 
     //guardar
-    @PostMapping("/educacion")
+    @PostMapping("/guardar")
     
     public  Educacion guardar(@RequestBody Educacion educacion)
     {
@@ -58,7 +58,7 @@ public class EducacionController {
 	return educacionService.save(educacionActual);
     }
    
-    @DeleteMapping("/educacion/{id}")
+    @DeleteMapping("/eliminar/{id}")
     
     public void eliminar(@PathVariable Integer id)
     {
